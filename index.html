@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dehradun Route Optimizer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+  <script>
+  if (localStorage.getItem("isLoggedIn") !== "true") {
+    window.location.href = "login.html";
+  }
+</script>
+
+  <h1>Dehradun Route Optimization</h1>
+
+  <div id="map"></div>
+
+  <div id="controls">
+    <label for="source">Source:</label>
+    <select id="source"></select>
+
+    <label for="destination">Destination:</label>
+    <select id="destination"></select>
+
+    <label for="algorithm">Algorithm:</label>
+    <select id="algorithm">
+      <option value="Dijkstra">Dijkstra</option>
+      <option value="A*">A*</option>
+      <option value="Bellman-Ford">Bellman-Ford</option>
+      <option value="Floyd-Warshall">Floyd-Warshall</option>
+      <option value="Yen's K Shortest">Yen's K Shortest</option>
+      <option value="Genetic/ACO">Genetic/ACO</option>
+      <option value="Mapbox/Google API">Mapbox/Google API</option>
+    </select>
+
+    <button onclick="findRoute()">Find Shortest Path</button>
+    <button onclick="logout()">Logout</button>
+
+  </div>
+
+  <div id="output">
+    <p id="route"></p>
+    <p id="distance"></p>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="data.js"></script>
+  <script src="map.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+

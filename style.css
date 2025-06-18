@@ -1,0 +1,136 @@
+/* General Page Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  text-align: center;
+  color: #333;
+}
+
+h1 {
+  background-color: #004466;
+  color: white;
+  padding: 20px 0;
+  margin: 0;
+  font-size: 28px;
+}
+
+/* Map Container */
+#map {
+  height: 500px;
+  width: 90%;
+  max-width: 1000px;
+  margin: 20px auto;
+  border: 2px solid #004466;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Controls */
+#controls {
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+}
+
+select, button {
+  padding: 10px 12px;
+  font-size: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+button {
+  background-color: #004466;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #006080;
+}
+
+/* Output */
+#output {
+  margin: 20px auto;
+  font-size: 18px;
+  max-width: 800px;
+  background-color: #eef6f8;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #bcd;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#output p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+  #map {
+    height: 400px;
+    width: 95%;
+  }
+
+  #controls {
+    flex-direction: column;
+  }
+
+  select, button {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  #output {
+    width: 90%;
+    font-size: 16px;
+  }
+}
+.login-container {
+  max-width: 400px;
+  margin: 100px auto;
+  background-color: #eef6f8;
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid #bcd;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.login-container input {
+  display: block;
+  width: 90%;
+  margin: 15px auto;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.login-container button {
+  padding: 10px 20px;
+  background-color: #004466;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.login-container button:hover {
+  background-color: #006080;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
